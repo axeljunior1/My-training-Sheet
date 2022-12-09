@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
 @SpringBootApplication
 public class MyTrainingSheetApplication {
@@ -13,15 +15,11 @@ public class MyTrainingSheetApplication {
 		SpringApplication.run(MyTrainingSheetApplication.class, args);
 	}
 
-	@RequestMapping("/")
-	String getAll(){
-		return "Hello Word";
-	}
 
-	@RequestMapping("/id")
-	String getById( String id){
-		id = "5" ;
-		return  "Your Id is: "+ id ;
+	@RequestMapping("/")
+	Date getmap (){
+		Date d = new Date();
+		return d ;
 	}
 
 }
