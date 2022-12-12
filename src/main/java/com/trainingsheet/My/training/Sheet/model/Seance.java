@@ -15,12 +15,16 @@ public class Seance {
     @Column(name = "id", nullable = false)
     private int id;
 
+    @Lob
     private String date = (new Date()).toString();
 
+    @Lob
     private String discipline;
 
+    @Lob
     private String image = "https://contents.mediadecathlon.com/s820187/k$2bae6afc58f7b29aee0eb4756bd40f31/800x0/3293pt2194/4388xcr4388/je-debute-la-musculation-par-quoi-commencer.jpg?format=auto&quality=80";
 
+    @Lob
     private String exercices;
 
 

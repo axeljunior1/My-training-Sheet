@@ -32,11 +32,6 @@ public class SeanceController {
        return seanceService.saveSeance(s);
     }
 
-    @CrossOrigin
-    @PostMapping("/seances")
-    Iterable<Seance> saveSeances ( @RequestBody Iterable<Seance> seances){
-        return seanceService.saveSeances(seances);
-    }
 
     @CrossOrigin
     @DeleteMapping("/seances/{id}")
@@ -52,8 +47,9 @@ public class SeanceController {
             Seance s =  ExistingSeance.get();
             if (seance.getImage() !=null) s.setImage(seance.getImage());
             if (seance.getDiscipline() !=null) s.setDiscipline(seance.getDiscipline());
-             seanceService.saveSeance(s);
-             return s ;
+            if (seance.getExercices() !=null) s.setExercices(seance.getExercices());
+            seanceService.saveSeance(s);
+            return s ;
         }
         return null ;
     }
