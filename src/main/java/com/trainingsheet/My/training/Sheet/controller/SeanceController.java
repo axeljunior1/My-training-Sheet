@@ -8,12 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1")
 public class SeanceController {
 
     @Autowired
     private SeanceService seanceService;
 
+    @CrossOrigin
+    @GetMapping("/")
+    Iterable<Seance> getAllSeance(){
+        return  seanceService.getAllSeances();
+    }
 
     @CrossOrigin
     @GetMapping("/seances")

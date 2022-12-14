@@ -16,10 +16,6 @@ public class MyTrainingSheetApplication {
 	}
 
 
-	@RequestMapping("/")
-	Date getmap (){
-		Date d = new Date();
-		return d ;
-	}
+
 
 }
