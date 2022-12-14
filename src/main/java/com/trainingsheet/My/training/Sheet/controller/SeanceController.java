@@ -24,13 +24,14 @@ public class SeanceController {
     @GetMapping("/seances")
     Iterable<Seance> getAllSeances(){
         return  seanceService.getAllSeances();
+
     }
 
     @CrossOrigin
     @GetMapping("/seances/{id}")
     Optional<Seance> getSeanceById(@PathVariable ("id") final int id ){
       return   seanceService.getSeanceById(id);
-      
+
     }
 
     @CrossOrigin
