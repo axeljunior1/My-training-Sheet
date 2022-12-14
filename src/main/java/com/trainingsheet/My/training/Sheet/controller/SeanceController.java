@@ -16,6 +16,7 @@ public class SeanceController {
     @CrossOrigin
     @GetMapping("/")
     Iterable<Seance> getAllSeance(){
+
         return  seanceService.getAllSeances();
     }
 
