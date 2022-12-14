@@ -30,6 +30,7 @@ public class SeanceController {
     @GetMapping("/seances/{id}")
     Optional<Seance> getSeanceById(@PathVariable ("id") final int id ){
       return   seanceService.getSeanceById(id);
+      
     }
 
     @CrossOrigin
